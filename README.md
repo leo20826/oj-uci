@@ -67,7 +67,7 @@ Install Node.js packages:
 (ojsite) $ npm install
 ```
 
-You will now need to configure `dmoj/local_settings.py`. You should make a copy of [this sample settings file](https://github.com/VNOI-Admin/vnoj-docs/blob/master/sample_files/local_settings.py) and read through it, making changes as necessary. Most importantly, you will want to update MariaDB credentials.
+You will now need to configure `dmoj/local_settings.py`. You should make a copy of [this sample settings file](https://github.com/leo20826/oj-uci-docs/blob/master/sample_files/local_settings.py) and read through it, making changes as necessary. Most importantly, you will want to update MariaDB credentials.
 
 ?> Leave debug mode on for now; we'll disable it later after we've verified that the site works. <br> <br>
 Generally, it's recommended that you add your settings in `dmoj/local_settings.py` rather than modifying `dmoj/settings.py` directly. `settings.py` will automatically read `local_settings.py` and load it, so write your configuration there.
