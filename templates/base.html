@@ -262,15 +262,12 @@
                     <i class="fa fa-exclamation-triangle" style="color: yellow;"></i>
                 </span>
             </a>
-            <a id="flag_vi" href="#" onclick="submmit_language('vi')" style="margin-right: 5px; margin-top: 4px;">
-                <img src="{{ static('icons/vi_flag.svg') }}" alt="VI" height="24">
-            </a>
-            <a id="flag_es" href="#" onclick="submmit_language('es')" style="margin-right: 5px; margin-top: 4px;">
-                <img src="{{ static('icons/es_flag.svg') }}" alt="ES" height="24">
-            </a>
-            <a id="flag_en" href="#" onclick="submmit_language('en')" style="margin-right: 5px; margin-top: 4px;">
-                <img src="{{ static('icons/gb_flag.svg') }}" alt="EN" height="24">
-            </a>
+            <select onchange="submmit_language(this.value)" 
+                    style="background: #333; color: white; border: 1px solid #555; border-radius: 4px; padding: 2px 5px; margin-right: 10px; cursor: pointer; font-size: 13px;">
+                <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>🇬🇧 EN</option>
+                <option value="es" {% if LANGUAGE_CODE == 'es' %}selected{% endif %}>🇪🇸 ES</option>
+               {# <option value="vi" {% if LANGUAGE_CODE == 'vi' %}selected{% endif %}>🇻🇳 VI</option>#}
+            </select>
             {% if request.user.is_authenticated %}
                 <ul>
                     <li>
